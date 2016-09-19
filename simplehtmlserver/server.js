@@ -1,5 +1,6 @@
 const http = require('http');
-
+const hostname = '127.0.0.1';
+const port = 3001;
 const url = require('url');
 const path = require('path');
 const fs = require('fs');
@@ -13,7 +14,7 @@ const mimetypes = {
 	"css":"text/css"
 }
 
-http.createServer((req, res)=>{
+const server = http.createServer((req, res)=>{
 	var uri = url.parse(req.url).pathname;
 	var fileName = path.join(process.cwd(), unescape(uri));
 	console.log(`loading ${uri}`);
@@ -39,4 +40,8 @@ http.createServer((req, res)=>{
 		res.write('500 internal server error\n');
 		res.end();
 	}
-}).listen(3000);
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
