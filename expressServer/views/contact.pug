@@ -1,0 +1,17 @@
+extends layout.pug
+
+block content
+  .container
+    h1 Contact
+    form.col-md-8(method='post', action='contact/send')
+      .form-group.row
+        label Name
+        input.form-control(type='text', name='name', placeholder='Mohammed')
+      .form-group.row
+        label Email
+        input.form-control(type'email',name='email', placeholder='test@email.com')
+      .form-group.row
+        label Message
+        textarea.form-control( name='message', placeholder='Message')
+      .form-grop.row
+        button.btn.btn-primary(type='submit') Submit Message

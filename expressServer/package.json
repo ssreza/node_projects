@@ -8,9 +8,10 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies":{
-  	"body-parser":"*",
-      "pug":"*",
-      "nodemailer":"*" 
+  "dependencies": {
+    "body-parser": "*",
+    "nodemailer": "*",
+    "pug": "^0.1.0",
+    "sendgrid": "^4.3.0"
   }
 }
