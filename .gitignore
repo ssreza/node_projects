@@ -1,4 +1,4 @@
 node_modules/
 */node_modules/
-run.sh
+.env
 setup-nodejs
