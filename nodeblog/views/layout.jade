@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    title Welcome
+    link(href='/stylesheets/bootstrap.css', rel='stylesheet')
+    link(href='/stylesheets/style.css', rel='stylesheet')
+  body
+    .navbar.navbar-default(role='navigation')
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          al(href='#')
+            img.navbar-brand.logo(src='/images/nodebloglogo.png')
+          a.navbar-brand(href='#') NodeBlog
+        .navbar-collapse.collapse
+          ul.nav.navbar-nav
+            li
+              a(href='/') Home
+            li 
+              a(href='/posts/add') Add Post
+            li 
+              a(href='/categories/add') Add Category
+    .container
+      != messages()
+      block content
+    hr
+    footer
+      p NodeBlog &copy; 2016
